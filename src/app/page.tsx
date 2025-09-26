@@ -64,7 +64,7 @@ export default function Home() {
           
           <a
             className="rounded-full border border-solid border-green-600 bg-green-600 hover:bg-green-700 transition-colors flex items-center justify-center text-white gap-2 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://www.google.com"
+            href="https://dora-world.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
