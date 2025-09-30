@@ -17,6 +17,16 @@ export default function Home() {
       // ここでファイル処理のロジックを実装
     }
   };
+
+  const handle404Click = async () => {
+    try {
+      const response = await fetch('/api/404');
+      const data = await response.json();
+      console.log('404 response:', data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -86,6 +96,13 @@ export default function Home() {
           >
             Read our docs
           </a>
+
+          <button
+            onClick={handle404Click}
+            className="rounded-full border border-solid border-red-600 bg-red-600 hover:bg-red-700 transition-colors flex items-center justify-center text-white gap-2 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
+          >
+            404エラー
+          </button>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
